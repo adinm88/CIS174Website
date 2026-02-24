@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yj2k97lJ+jE=",
+  "dgSpecHash": "hPbR5Fr068E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adinm\\Documents\\Visual Studio 18\\Projects\\PhoneWebApp\\CIS174Website.csproj",
+  "projectFilePath": "C:\\Users\\adinm\\CIS174Website\\CIS174Website.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adinm\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\adinm\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
