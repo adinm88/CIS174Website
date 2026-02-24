@@ -9,6 +9,12 @@ namespace PhoneWebApp.Controllers
 
         public PhoneContactController(PhoneContactContext ctx) => context = ctx;
 
+        public IActionResult Index()
+        {
+            var phoneContacts = context.PhoneContacts.ToList();
+            return View(phoneContacts);
+        }
+
         [HttpGet]
         public IActionResult Add()
         {
@@ -32,7 +38,7 @@ namespace PhoneWebApp.Controllers
                 else
                     context.PhoneContacts.Update(phoneContact);
                 context.SaveChanges();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "PhoneContact");
             }
             else
             {
@@ -51,7 +57,7 @@ namespace PhoneWebApp.Controllers
         {
             context.PhoneContacts.Remove(phoneContact);
             context.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "PhoneContact");
         }
 
         [Route ("contact")]

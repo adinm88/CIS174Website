@@ -12,6 +12,7 @@ namespace PhoneWebApp
             builder.Services.AddDbContext<PhoneContactContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("PhoneContacts"), sqlOptions => sqlOptions.EnableRetryOnFailure()));
 
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

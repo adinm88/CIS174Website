@@ -13,8 +13,7 @@ namespace PhoneWebApp.Controllers
         public HomeController(PhoneContactContext ctx) => context = ctx;
         public IActionResult Index()
         {
-            var phoneContacts = context.PhoneContacts.ToList();
-            return View(phoneContacts);
+            return View();
         }
         public IActionResult About()
         {
