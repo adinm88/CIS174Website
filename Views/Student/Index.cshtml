@@ -9,7 +9,7 @@
 {
     <p>You do not have a sufficient access level to view this data.</p>
 }
-@if (Model.AccessLevel > 2 && Model.AccessLevel < 8)
+@if (Model.AccessLevel >= 2 && Model.AccessLevel < 8)
 {
     <h4>Student Information</h4>
     @foreach (var student in Model.Students)
