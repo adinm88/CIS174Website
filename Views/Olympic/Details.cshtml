@@ -18,6 +18,11 @@
     <p>Sport: @Model.Sport</p>
     <p>Category: @Model.Category</p>
 
-    <a asp-action="Index">Back to Countries</a>
+    <a asp-action="Index">Back to Countries</a> <br />
+
+
+    <a asp-controller="Favorites" asp-action="Add" asp-route-id="@Model.Country">
+        Add to Favorites
+    </a>
 </body>
 </html>

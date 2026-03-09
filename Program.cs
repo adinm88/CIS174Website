@@ -12,6 +12,8 @@ namespace PhoneWebApp
             builder.Services.AddDbContext<PhoneContactContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("PhoneContacts"), sqlOptions => sqlOptions.EnableRetryOnFailure()));
 
+            builder.Services.AddMemoryCache();
+            builder.Services.AddSession();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -32,7 +34,7 @@ namespace PhoneWebApp
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
