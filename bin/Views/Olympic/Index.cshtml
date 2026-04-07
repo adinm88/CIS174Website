@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model OlympicFilterViewModel
+@{
+    ViewData["Title"] = "Olympic Countries";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Olympic Countries</h1>
+    <p>Select a country to view its participation, <a asp-controller="Favorites" asp-action="Index">View Favorites</a></p>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Category Filters
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="ALL" asp-route-Category="Indoor">Filter by Indoor</a></li>
+            <li><a class="dropdown-item" asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="ALL" asp-route-Category="Outdoor">Filter by Outdoor</a></li>
+
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Game Filters
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="Winter Olympics" asp-route-Category="ALL">Filter by Winter Olympics</a></li>
+            <li><a class="dropdown-item" asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="Summer Olympics" asp-route-Category="ALL">Filter by Summer Olympics</a></li>
+            <li><a class="dropdown-item" asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="Paralympics" asp-route-Category="ALL">Filter by Paralympics</a></li>
+            <li><a class="dropdown-item" asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="Youth Olympic Games" asp-route-Category="ALL">Filter by Youth Olympic Games</a></li>
+            
+
+        </ul>
+    </li>
+    <a asp-area="" asp-controller="Olympic" asp-action="Index" asp-route-Game="ALL" asp-route-Category="ALL">Reset Filters</a> <br />
+    </head>
+    
+    <body>
+        @foreach (var country in Model.Countries)
+        {
+            <a asp-area="" asp-controller="Olympic" asp-action="Details" asp-route-id="@country.Country"><img src="~/images/@country.FlagImage" title="@country.Country - @country.Game - @country.Sport/@country.Category" /></a>
+        }
+    </body>
+</html>
