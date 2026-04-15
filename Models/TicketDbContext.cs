@@ -1,6 +1,4 @@
-﻿using global::PhoneWebApp.Models;
-using Microsoft.EntityFrameworkCore;
-using PhoneWebApp.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace PhoneWebApp.Models
 {

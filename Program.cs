@@ -1,3 +1,4 @@
+using CIS174Website.Models;
 using Microsoft.EntityFrameworkCore;
 using PhoneWebApp.Models;
 
@@ -16,6 +17,7 @@ namespace PhoneWebApp
             builder.Services.AddMemoryCache();
             builder.Services.AddSession();
 
+            builder.Services.AddScoped<ITicketRepository, TicketRepository>();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

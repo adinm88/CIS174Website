@@ -6,10 +6,10 @@ namespace PhoneWebApp.Controllers
 {
     public class TicketsController : Controller
     {
-        private TicketDbContext _context;
-        public TicketsController(TicketDbContext context)
+        private readonly ITicketRepository _repo;
+        public TicketsController(ITicketRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
         public IActionResult Index(string status = "All")
         {
@@ -17,11 +17,7 @@ namespace PhoneWebApp.Controllers
 
             vm.CurrentStatus = status;
 
-            var query = _context.Tickets.AsQueryable();
-
-            vm.Tickets = status == "All"
-                ? query.ToList()
-                : query.Where(t => t.Status == status).ToList();
+            vm.Tickets = status == "All" ? _repo.GetAll() : _repo.GetByStatus(status);
 
             List<Ticket> validTickets = new List<Ticket>();
             // VALIDATE EACH TICKET
