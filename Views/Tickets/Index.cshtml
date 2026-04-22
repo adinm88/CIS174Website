@@ -8,14 +8,15 @@
 
 <h1>ToDo Tickets</h1>
 
-<p>
-    Filter:
-    <a asp-action="Index" asp-route-status="All">All</a> |
-    <a asp-action="Index" asp-route-status="To Do">To Do</a> |
-    <a asp-action="Index" asp-route-status="In Progress">In Progress</a> |
-    <a asp-action="Index" asp-route-status="QA">QA</a> |
-    <a asp-action="Index" asp-route-status="Done">Done</a>
-</p>
+<p>Filter:</p>
+
+<form asp-action="Index" method="get">
+    <button type="submit" name="status" value="All" class="btn btn-dark">All</button>
+    <button type="submit" name="status" value="To Do" class="btn btn-secondary">To Do</button>
+    <button type="submit" name="status" value="In Progress" class="btn btn-primary">In Progress</button>
+    <button type="submit" name="status" value="QA" class="btn btn-warning">QA</button>
+    <button type="submit" name="status" value="Done" class="btn btn-success">Done</button>
+</form>
 
 <table border="1">
     <tr>
@@ -35,7 +36,9 @@
             <td>@ticket.Description</td>
             <td>@ticket.SprintNumber</td>
             <td>@ticket.PointValue</td>
-            <td>@ticket.Status</td>
+            <td>
+                @await Component.InvokeAsync("Status", new { status = ticket.Status })
+            </td>
         </tr>
     }
 </table>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yj2k97lJ+jE=",
+  "dgSpecHash": "vU8Z6XvDBaY=",
   "success": true,
   "projectFilePath": "C:\\Users\\adinm\\Documents\\Visual Studio 18\\Projects\\PhoneWebApp\\CIS174Website.csproj",
   "expectedPackageFiles": [
@@ -157,10 +157,10 @@
     "C:\\Users\\adinm\\.nuget\\packages\\system.text.json\\8.0.6\\system.text.json.8.0.6.nupkg.sha512",
     "C:\\Users\\adinm\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\adinm\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.24\\microsoft.windowsdesktop.app.ref.8.0.24.nupkg.sha512",
-    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
-    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\8.0.24\\microsoft.netcore.app.host.win-arm64.8.0.24.nupkg.sha512",
-    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512"
+    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.26\\microsoft.windowsdesktop.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.26\\microsoft.netcore.app.ref.8.0.26.nupkg.sha512",
+    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\8.0.26\\microsoft.netcore.app.host.win-arm64.8.0.26.nupkg.sha512",
+    "C:\\Users\\adinm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.26\\microsoft.aspnetcore.app.ref.8.0.26.nupkg.sha512"
   ],
   "logs": []
 }

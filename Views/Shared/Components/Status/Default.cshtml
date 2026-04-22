@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    string color = "gray";
+
+    switch (Model)
+    {
+        case "To Do":
+            color = "darkgray";
+            break;
+        case "In Progress":
+            color = "blue";
+            break;
+        case "QA":
+            color = "orange";
+            break;
+        case "Done":
+            color = "green";
+            break;
+    }
+}
+
+<span style="padding:5px 10px; color:white; background-color:@color; border-radius:5px;">
+    @Model
+</span>
